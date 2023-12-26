@@ -46,7 +46,6 @@ glyph-block Letter-Latin-Eth : begin
 			curl [mix Width xTerminal 2]                 [mix yMockBarStart CAP 2]
 
 	select-variant 'dInsular' 0xA77A (follow -- 'eth')
-	select-variant 'partial'  0x2202 (shapeFrom -- 'dInsular')
 
 	derive-composites 'eth' 0xF0 'dInsular' : dispiro
 		widths.center OverlayStroke
@@ -77,3 +76,21 @@ glyph-block Letter-Latin-Eth : begin
 			dispiro
 				flat (df.middle + CorrectionOMidS) top [widths.lhs : AdviceStroke 3]
 				curl [mix 0 df.leftSB 0.5] top
+	create-glyph 'partial' 0x2202 : glyph-proc
+		include : MarkSet.b
+		local yMid : CAP * 0.65
+		include : dispiro
+			flat (RightSB - OX - (1 - CThin) * Stroke * HVContrast) SmallSmoothA [widths.lhs : Stroke * CThin]
+			curl (RightSB - OX - (1 - CThin) * Stroke * HVContrast) (yMid - SmallSmoothB)
+			arcvh
+			g4 (Middle + CorrectionOMidS) (yMid - O) [widths.lhs]
+			archv
+			flat (SB + OX) (yMid - SmallSmoothA)
+			curl (SB + OX) SmallSmoothB
+			arcvh
+			g4 (Middle - CorrectionOMidS) O
+			archv
+			flat (RightSB - OX) SmallSmoothA
+			curl (RightSB - OX) (CAP - SmallSmoothB)
+			hookend (CAP - O)
+			g4   SB (CAP - Hook)
