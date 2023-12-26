@@ -38,7 +38,7 @@ jobs:
         path: dist
     - name: Patch fonts
       run: sudo apt install -y fontforge
-    - run: git clone --depth=1 git@github.com:ryanoasis/nerd-fonts.git
+    - run: git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
     - run: mv dist nerd-fonts/src/unpatched-fonts
     - run: nerd-fonts/bin/scripts/gotta-patch-em-all-font-patcher\!.sh /dist/Iosev04/TTF
     - name: Upload a Build Artifact
