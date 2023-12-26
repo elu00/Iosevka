@@ -1,9 +1,9 @@
-[buildPlans.SS04]
-family = "SS04"
+[buildPlans.Iosev04]
+family = "Iosev04"
 spacing = "normal"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-  [buildPlans.IosevkaCustom.variants]
+  [buildPlans.Iosev04.variants]
   inherits = "ss04"
