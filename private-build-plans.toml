@@ -1,5 +1,5 @@
-[buildPlans.IosevkaCustom]
-family = "Iosevka Custom"
+[buildPlans.SS04]
+family = "SS04"
 spacing = "normal"
 serifs = "sans"
 noCvSs = true
