@@ -54,20 +54,26 @@ glyph-block Letter-Latin-Eth : begin
 		curl [mix SB RightSB 0.95] [mix XH Ascender 0.35]
 
 	create-glyph 'DInsular' 0xA779 : glyph-proc
-		include : MarkSet.b
-		local yMid : CAP * 0.65
-		include : dispiro
-			flat (RightSB - OX - (1 - CThin) * Stroke * HVContrast) SmallSmoothA [widths.lhs : Stroke * CThin]
-			curl (RightSB - OX - (1 - CThin) * Stroke * HVContrast) (yMid - SmallSmoothB)
-			arcvh
-			g4 (Middle + CorrectionOMidS) (yMid - O) [widths.lhs]
-			archv
-			flat (SB + OX) (yMid - SmallSmoothA)
-			curl (SB + OX) SmallSmoothB
-			arcvh
-			g4 (Middle - CorrectionOMidS) O
-			archv
-			flat (RightSB - OX) SmallSmoothA
-			curl (RightSB - OX) (CAP - SmallSmoothB)
-			hookend (CAP - O)
-			g4   SB (CAP - Hook) 
+		include : MarkSet.capital
+		local df : DivFrame 1
+		local fine : mix ShoulderFine Stroke 0.125
+		local cofine : Stroke - fine
+		local top : CAP - O
+
+		include : union
+			dispiro
+				flat (df.middle + Stroke * TanSlope - O) (top - cofine) [widths.lhs fine]
+				curl (df.middle - CorrectionOMidX * fine) (top - cofine)
+				archv
+				flat df.leftSB (CAP - ArchDepthA) [widths.lhs Stroke]
+				curl df.leftSB ArchDepthB
+				arcvh
+				g4 (df.middle + CorrectionOMidS) 0
+				archv
+				flat df.rightSB ArchDepthA
+				curl df.rightSB (CAP - ArchDepthB)
+				arcvh
+				straight.left.end (df.middle - CorrectionOMidS) top
+			dispiro
+				flat (df.middle + CorrectionOMidS) top [widths.lhs : AdviceStroke 3]
+				curl [mix 0 df.leftSB 0.5] top
