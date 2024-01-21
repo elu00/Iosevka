@@ -1,5 +1,40 @@
 ## Modifications since last major version
 
+### 28.0.6
+
+* Fix application of `APLF` for several [Uiua](https://www.uiua.org/) operators.
+* Adjust serif shapes for lowercase italic Yeri glyphs with corner body shape (#2151).
+* Adjustments to CV defaults:
+  - Make `a` (`cv26`) use `single-storey-tailed` under slab italic by default.
+  - Make `b` (`cv27`) use `toothed-motion-serifed` under slab italic by default.
+  - Make `g` (`cv32`) use `single-storey-serifless` under slab italic by default.
+  - Make `q` (`cv41`) use `straight-bottom-serifed` under slab italic by default.
+
+
+### 28.0.5
+
+* Add characters:
+  - LIGHTNING (`U+2607`) (#2158).
+  - SUBSET WITH DOT (`U+2ABD`).
+  - SUPERSET WITH DOT (`U+2ABE`).
+* Add untagged variant selector for Cyrillic Capital Ef (`Ф`) for style-driven variation.
+* Allow turned h (`ɥ`) and turned m with long leg (`ɰ`) to use toothless-corner variants.
+* Fix leaning marks of Turned/Reversed Sans-Serif Capital L.
+* Fix leaning marks of Cyrillic Tall Te.
+* Fix leaning marks of Greek Lower Mu/Rho.
+* `APLF` feature will apply to all [Uiua](https://www.uiua.org/) operators.
+
+
+### 28.0.4
+
+* Fix leaning marks of turned capital F/L (#2137).
+* Fix overlay bar placement of Z with Hook and Z with Swash Tail (#2141).
+* Fix attachment of descender parts of Cyrillic Lower Ha/X under `x` = `cursive` (#2142).
+* Make the Eng part in LATIN SMALL LETTER FENG DIGRAPH always connected to the f part (#2143).
+* Fix top bar shape in CYRILLIC CAPITAL LETTER DJE (#2145).
+* Fix leaning marks placement for reversed k/F/P (#2150).
+
+
 ### 28.0.3
 
 * Add characters:
