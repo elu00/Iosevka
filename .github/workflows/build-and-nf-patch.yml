@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
     - run: sudo apt install -y ttfautohint
     - run: npm ci
-    - run: npm run build -- ttf::Iosev04
+    - run: npm run build -- ttf::IosevkaTermSs04
     - name: Upload original
       uses: actions/upload-artifact@v4.0.0
       with:
@@ -40,7 +40,7 @@ jobs:
       run: sudo apt install -y fontforge
     - run: git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
     - run: mv dist nerd-fonts/src/unpatched-fonts
-    - run: nerd-fonts/bin/scripts/gotta-patch-em-all-font-patcher\!.sh /dist/Iosev04/TTF
+    - run: nerd-fonts/bin/scripts/gotta-patch-em-all-font-patcher\!.sh /dist/IosevkaTermSs04/TTF
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.0.0
       with:
