@@ -1,9 +1,9 @@
-[buildPlans.Iosev04]
-family = "Iosev04"
-spacing = "normal"
+[buildPlans.IosevkaTermSs04]
+family = "Iosevka Term SS04"
+spacing = "term"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-  [buildPlans.Iosev04.variants]
+  [buildPlans.IosevkaTermSs04.variants]
   inherits = "ss04"
