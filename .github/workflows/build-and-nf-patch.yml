@@ -20,7 +20,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4.0.2
       with:
@@ -29,7 +29,7 @@ jobs:
     - run: sudo apt-get update
     - run: sudo apt install -y ttfautohint
     - run: npm ci
-    - run: npm run build -- ttf::IosevkaSs04
+    - run: npm run build -- ttf::IosevkaTermSs04
     - name: Upload original
       uses: actions/upload-artifact@v4.0.0
       with:
