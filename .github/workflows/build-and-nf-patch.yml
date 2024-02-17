@@ -36,18 +36,18 @@ jobs:
         name: orig
         # A file, directory or wildcard pattern that describes what to upload
         path: dist
-    - name: Patch fonts
-      run: sudo apt install -y fontforge
-    - run: git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
-    - run: mv dist nerd-fonts/src/unpatched-fonts
-    - run: nerd-fonts/bin/scripts/gotta-patch-em-all-font-patcher\!.sh /dist/IosevkaTermSs04/TTF
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.0.0
-      with:
-        # Artifact name
-        name: ttf
-        # A file, directory or wildcard pattern that describes what to upload
-        path: nerd-fonts/patched-fonts/dist
+    #- name: Patch fonts
+    #  run: sudo apt install -y fontforge
+    #- run: git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
+    #- run: mv dist nerd-fonts/src/unpatched-fonts
+    #- run: nerd-fonts/bin/scripts/gotta-patch-em-all-font-patcher\!.sh /dist/IosevkaTermSs04/TTF
+    #- name: Upload a Build Artifact
+    #  uses: actions/upload-artifact@v4.0.0
+    #  with:
+    #    # Artifact name
+    #    name: ttf
+    #    # A file, directory or wildcard pattern that describes what to upload
+    #    path: nerd-fonts/patched-fonts/dist
         
               
         
