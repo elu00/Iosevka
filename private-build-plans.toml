@@ -2,7 +2,7 @@
 family = "Iosevka SS04"
 spacing = "normal"
 serifs = "sans"
-noCvSs = true
+noCvSs = false
 exportGlyphNames = true
 
   [buildPlans.IosevkaSs04.variants]
